@@ -15,7 +15,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG Destination IP",
+      "title": "Sophos XG Dest IP",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -29,7 +29,21 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG log id",
+      "title": "Sophos XG Log Priority",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_priority",
+      "extractor_config": {
+        "regex_value": "priority=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Log ID",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -43,7 +57,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG log component",
+      "title": "Sophos XG Log Component",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -57,7 +71,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG status firewall",
+      "title": "Sophos XG Status",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -71,7 +85,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG user_name firewall",
+      "title": "Sophos XG Username",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -85,7 +99,21 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG out interface firewall",
+      "title": "Sophos XG User Group",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_user_gp",
+      "extractor_config": {
+        "regex_value": "user_gp=\"([^\"]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG OUT Interface",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -99,7 +127,35 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG in interface ip firewall",
+      "title": "Sophos XG Bridge Interface",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_bridge_name",
+      "extractor_config": {
+        "regex_value": "bridge_name=\"([^\"]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Bridge Interface Name",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_bridge_display_name",
+      "extractor_config": {
+        "regex_value": "bridge_display_name=\"([^\"]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG IN Interface",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -113,7 +169,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG firewall timezone",
+      "title": "Sophos XG Timezone",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -127,7 +183,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG log subtype",
+      "title": "Sophos XG Log Subtype",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -141,7 +197,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG log type",
+      "title": "Sophos XG Log Type",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -155,7 +211,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG firewall time",
+      "title": "Sophos XG Time",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -169,7 +225,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG firewall date",
+      "title": "Sophos XG Date",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -183,7 +239,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG device",
+      "title": "Sophos XG Device",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -197,7 +253,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG device name",
+      "title": "Sophos XG Device Name",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -239,7 +295,21 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG Source County Code",
+      "title": "Sophos XG Dest MAC",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_dst_mac",
+      "extractor_config": {
+        "regex_value": "dst_mac=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Source Country Code",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -253,7 +323,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG Destination County Code",
+      "title": "Sophos XG Dest Country Code",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -295,7 +365,7 @@
       "condition_value": "device=\"SFW\""
     },
     {
-      "title": "Sophos XG Destination port",
+      "title": "Sophos XG Dest port",
       "extractor_type": "regex",
       "converters": [],
       "order": 0,
@@ -307,7 +377,399 @@
       },
       "condition_type": "string",
       "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Device ID (Serial Number)",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_device_id",
+      "extractor_config": {
+        "regex_value": "device_id=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Nat Rule ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_nat_rule_id",
+      "extractor_config": {
+        "regex_value": "nat_rule_id=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Policy Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_policy_type",
+      "extractor_config": {
+        "regex_value": "policy_type=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG IPS Policy ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_ips_policy_id",
+      "extractor_config": {
+        "regex_value": "ips_policy_id=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Application Name",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_application",
+      "extractor_config": {
+        "regex_value": "application=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Application Risk",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_application_risk",
+      "extractor_config": {
+        "regex_value": "application_risk=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Application Technology",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_application_technology",
+      "extractor_config": {
+        "regex_value": "application_technology=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Application Category",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_application_category",
+      "extractor_config": {
+        "regex_value": "application_category=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Application Policy ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_appfilter_policy_id",
+      "extractor_config": {
+        "regex_value": "appfilter_policy_id=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Application Resolved by",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_appresolvedby",
+      "extractor_config": {
+        "regex_value": "appresolvedby=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Application is Cloud",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_app_is_cloud",
+      "extractor_config": {
+        "regex_value": "app_is_cloud=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Heartbeat Health",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_hb_health",
+      "extractor_config": {
+        "regex_value": "hb_health=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Dest Zone",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_dstzone",
+      "extractor_config": {
+        "regex_value": "dstzone=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Dest Zone Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_dstzonetype",
+      "extractor_config": {
+        "regex_value": "dstzonetype=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Source Zone Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_srczone",
+      "extractor_config": {
+        "regex_value": "srczone=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Source Zone Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_srczonetype",
+      "extractor_config": {
+        "regex_value": "srczonetype=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Source Zone Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_srczonetype",
+      "extractor_config": {
+        "regex_value": "srczonetype=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG VLAN ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_vlan_id",
+      "extractor_config": {
+        "regex_value": "vlan_id=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG NAT Translated Source IP",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_tran_src_ip",
+      "extractor_config": {
+        "regex_value": "tran_src_ip=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG NAT Translated Source Port",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_tran_src_port",
+      "extractor_config": {
+        "regex_value": "tran_src_port=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG NAT Translated Dest IP",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_tran_dst_ip",
+      "extractor_config": {
+        "regex_value": "tran_dst_ip=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG NAT Translated Dest Port",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_tran_dst_port",
+      "extractor_config": {
+        "regex_value": "tran_dst_port=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Connection ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_connid",
+      "extractor_config": {
+        "regex_value": "connid=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Connection Event",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_connevent",
+      "extractor_config": {
+        "regex_value": "connevent=\"([^\\s]*)\""
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Sent Packets",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_sent_pkts",
+      "extractor_config": {
+        "regex_value": "sent_pkts=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Sent Bytes",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_sent_bytes",
+      "extractor_config": {
+        "regex_value": "sent_bytes=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Received Packets",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_recv_pkts",
+      "extractor_config": {
+        "regex_value": "recv_pkts=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
+    },
+    {
+      "title": "Sophos XG Received Bytes",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "fw_recv_bytes",
+      "extractor_config": {
+        "regex_value": "sent_bytes=([^\\s]*)"
+      },
+      "condition_type": "string",
+      "condition_value": "device=\"SFW\""
     }
   ],
-  "version": "2.5.1"
+  "version": "3"
 }
